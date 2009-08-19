@@ -32,7 +32,7 @@ import os
 import re
 import pkg_resources
 
-from minitage.recipe import egg
+from minitage.recipe.egg import egg
 import StringIO
 
 CUTED_STR = '#--- 8-< 8-<  8-<  8-<  8-<  8-<  8-<  ---'
