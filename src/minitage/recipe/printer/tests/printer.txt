@@ -1,11 +1,12 @@
 
 ===============================================
-minitage.recipe:printer
+minitage.recipe.printer
 ===============================================
 
 
 Abstract
 -----------------
+
     - This recipe intends to install eggs and python software and on top of installed stuff, generating KGS (Known good Set) versions file.
     - This will help you to pin all the eggs used by a specific application by generating nicely configs with all eggs pinned insude?
     - This recipe inherit from minitage;recipe:egg.
@@ -13,7 +14,9 @@ Abstract
 Specific options
 -----------------
 
-    * All the shared options and the options from minitage.recipe:egg +
+Please look for options at : http://pypi.python.org/pypi/minitage.recipe.common#options-shared-by-all-the-recipes
+And also  for options at :http://pypi.python.org/pypi/minitage.recipe.egg#specific-options
+
     * quiet
         if set: do not print anything to stdout
     * file
@@ -76,7 +79,7 @@ Do not specify the file option.
     ... download-cache=${buildout:directory}
     ... parts = part
     ... [part]
-    ... recipe=minitage.recipe:printer
+    ... recipe=minitage.recipe.printer
     ... find-links=%(index)s
     ... eggs=foo
     ... """%{'index': index_url}
@@ -100,7 +103,7 @@ Feed the part with the file option.
     ... download-cache=${buildout:directory}
     ... parts = part
     ... [part]
-    ... recipe=minitage.recipe:printer
+    ... recipe=minitage.recipe.printer
     ... find-links=%(index)s
     ... eggs=foo
     ... file=toto.cfg
@@ -131,7 +134,7 @@ Set the quiet flag.
     ... download-cache=${buildout:directory}
     ... parts = part
     ... [part]
-    ... recipe=minitage.recipe:printer
+    ... recipe=minitage.recipe.printer
     ... find-links=%(index)s
     ... eggs=foo
     ... quiet=1

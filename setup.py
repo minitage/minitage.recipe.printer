@@ -16,7 +16,7 @@ def read(*rnames):
 long_description = (
     read('README.txt')
     + '\n'\
-    + read('src', 'minitage', 'recipe', 'tests', 'printer.txt')
+    + read('src', 'minitage', 'recipe', 'printer', 'tests', 'printer.txt')
     + '\n'
     + read('CHANGES.txt')
     + '\n'
