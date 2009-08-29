@@ -8,8 +8,10 @@ Recipe for compiling and installing software with or without minitage
 Introduction
 =======================
 
-This is a collection of recipe which can be use inside or outside a minitage environment.
-What is interresting in using them in minitage is that you ll have all your system dependencies in
+This was a collection of recipes which can be use inside or outside a minitage environment.
+
+As they are now all splitted out from this package, we keep only left the
+entry points for asccendant compatibility purpose.
 the build environment automaticly.
 
 The egg has those entry point:
@@ -22,19 +24,6 @@ The egg has those entry point:
       are not already in the cache
     - *wsgi*: Make a Python paste configuration file eatable by mod_wsgi with
       all the eggs dependencies you need.
-
-The reasons why i have rewrite yet another buildout recipes builder are:
-    - Support for downloading stuff
-    - Do not rely on easy_install dependency system
-    - Support on the fly patchs for eggs and other distribution.
-    - Support multiple hooks at each stage of the build system.
-    - Support for distutils
-    - Robust offline mode
-    - We like pypi, but offer a mode to scan for eggs without need to check
-      the index,
-    - Support malformed or not indexed distributions.
-      In other terms, we provide an url, and the recipe builds it, that's all.
-    - All recipes must support automaticly minitage dependencies and rpath linking.
 
 You can browse the code on minitage's following resources:
 

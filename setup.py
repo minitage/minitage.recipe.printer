@@ -6,7 +6,7 @@ setupdir = os.path.abspath(
 os.chdir(setupdir)
 
 name='minitage.recipe'
-version = '1.34'
+version = '1.35'
 
 def read(*rnames):
     return open(
@@ -15,22 +15,6 @@ def read(*rnames):
 
 long_description = (
     read('README.txt')
-    + '\n'\
-    + read('src', 'minitage', 'recipe', 'tests', 'shared.txt')
-    + '\n'
-    + read('src', 'minitage', 'recipe', 'tests', 'scripts.txt')
-    + '\n'
-    + read('src', 'minitage', 'recipe', 'tests', 'egg.txt')
-    + '\n'
-    + read('src', 'minitage', 'recipe', 'tests', 'cmmi.txt')
-    + '\n'
-    + read('src', 'minitage', 'recipe', 'tests', 'fetch.txt')
-    + '\n'
-    + read('src', 'minitage', 'recipe', 'tests', 'printer.txt')
-    + '\n'
-    + read('src', 'minitage', 'recipe', 'tests', 'wsgi.txt')
-    + '\n'
-    + read('src', 'minitage', 'recipe', 'tests', 'api.txt')
     + '\n'
     + read('CHANGES.txt')
     + '\n'
@@ -67,6 +51,14 @@ setup(
         'setuptools',
         'minitage.core',
         'iniparse',
+        'minitage.recipe.common',
+        'minitage.recipe.cmmi',
+        'minitage.recipe.du',
+        'minitage.recipe.egg',
+        'minitage.recipe.scripts',
+        'minitage.recipe.fetch',
+        'minitage.recipe.wsgi',
+        'minitage.recipe.printer',
     ],
     extras_require={'test': ['IPython', 'zope.testing', 'mocker']},
     #tests_require = ['zope.testing'],
@@ -76,17 +68,16 @@ setup(
     # workaround when using the 2 recipes in the same buildout.
     entry_points = {
         'zc.buildout' : [
-            'default = %s:Recipe' % name,
-            'du = %s:Recipe' % 'minitage.recipe.du',
-            'fetch = %s:Recipe' % 'minitage.recipe.fetch',
-            'egg = %s:Recipe' % 'minitage.recipe.egg',
-            'printer = %s:Recipe' % 'minitage.recipe.printer',
-            'zdu = %s:Recipe' % 'minitage.recipe.du',
-            'cmmi = %s:Recipe' % 'minitage.recipe.cmmi',
-            'scripts = %s:Recipe' % 'minitage.recipe.scripts',
-            'script = %s:Recipe' % 'minitage.recipe.scripts',
-            'eggs = %s:Recipe' % 'minitage.recipe.scripts',
-            'wsgi = %s:Recipe' % 'minitage.recipe.wsgi',
+            'fetch = %s:Recipe' % 'minitage.recipe.fetch.fetch',
+            'egg = %s:Recipe' % 'minitage.recipe.egg.egg',
+            'printer = %s:Recipe' % 'minitage.recipe.printer.printer',
+            'zdu = %s:Recipe' % 'minitage.recipe.du.du',
+            'du =  %s:Recipe' % 'minitage.recipe.du.du',
+            'cmmi = %s:Recipe' % 'minitage.recipe.cmmi.cmmi',
+            'scripts = %s:Recipe' % 'minitage.recipe.scripts.scripts',
+            'eggs = %s:Recipe' % 'minitage.recipe.scripts.scripts',
+            'script = %s:Recipe' % 'minitage.recipe.scripts.scripts',
+            'wsgi = %s:Recipe' % 'minitage.recipe.wsgi.wsgi',
         ]
     },
 )
