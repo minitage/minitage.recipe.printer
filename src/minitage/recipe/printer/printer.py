@@ -58,6 +58,7 @@ class Recipe(egg.Recipe):
     def update(self):
         return self.install()
 
+    @egg.dependency_resolver_decorator
     def install(self):
         """Dump all eggs versions needed for part.
         """
