@@ -6,7 +6,7 @@ setupdir = os.path.abspath(
 os.chdir(setupdir)
 
 name='minitage.recipe.printer'
-version = '1.37'
+version = '1.38'
 
 def read(*rnames):
     return open(
@@ -50,7 +50,7 @@ setup(
     zip_safe=False,
     install_requires = [
         'zc.buildout',
-        'setuptools',
+        
         'minitage.core',
         'minitage.recipe.egg',
         'iniparse',
