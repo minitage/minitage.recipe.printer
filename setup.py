@@ -50,18 +50,8 @@ setup(
     zip_safe=False,
     install_requires = [
         'zc.buildout',
-        
-        'minitage.core',
-        'minitage.recipe.egg',
         'iniparse',
-        'minitage.recipe.common',
-        'minitage.recipe.cmmi',
-        'minitage.recipe.du',
-        'minitage.recipe.egg',
         'minitage.recipe.scripts',
-        'minitage.recipe.fetch',
-        'minitage.recipe.wsgi',
-        'minitage.recipe.printer',
     ],
     extras_require={'test': ['IPython', 'zope.testing', 'mocker']},
     #tests_require = ['zope.testing'],
