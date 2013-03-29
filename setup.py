@@ -6,7 +6,7 @@ setupdir = os.path.abspath(
 os.chdir(setupdir)
 
 name='minitage.recipe.printer'
-version = '1.38'
+version = '1.39.dev0'
 
 def read(*rnames):
     return open(
@@ -14,11 +14,11 @@ def read(*rnames):
     ).read()
 
 long_description = (
-    read('README.txt')
+    read('README.rst')
     + '\n'\
     + read('src', 'minitage', 'recipe', 'printer', 'tests', 'printer.txt')
     + '\n'
-    + read('CHANGES.txt')
+    + read('CHANGES.rst')
     + '\n'
 )
 
