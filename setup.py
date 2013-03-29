@@ -6,7 +6,7 @@ setupdir = os.path.abspath(
 os.chdir(setupdir)
 
 name='minitage.recipe.printer'
-version = '1.39'
+version = '1.40.dev0'
 
 def read(*rnames):
     return open(
